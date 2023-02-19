@@ -1,11 +1,5 @@
-# Astro + Vue Example
+# Double Vue initialization
 
-```
-npm create astro@latest -- --template framework-vue
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-vue)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/framework-vue)
-
-This example showcases Astro working with [Vue](https://v3.vuejs.org/).
+The trace at [src/_app](src/_app.ts) is printed one time per component.
+To be able to use [Pinia](https://pinia.vuejs.org/), it should be initialized one per load.
 
