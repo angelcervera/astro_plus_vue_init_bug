@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<pre>In the other component: {{ counter.count }}</pre>
+		<p style="font-size: x-large">This should change => : <strong>{{ counter.count }}</strong></p>
+		<p>
+			Checking the state in the Vue console, components are not sharing the state and Pinia is initialized two times.
+		</p>
 	</div>
 </template>
 
