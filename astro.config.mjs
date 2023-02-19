@@ -4,5 +4,5 @@ import vue from '@astrojs/vue';
 // https://astro.build/config
 export default defineConfig({
 	// Enable Vue to support Vue components.
-	integrations: [vue()],
+	integrations: [vue({ appEntrypoint: '/src/_app' })],
 });
