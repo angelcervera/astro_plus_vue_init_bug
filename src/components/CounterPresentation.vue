@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<p style="font-size: x-large">This should change => : <strong>{{ counter.count }}</strong></p>
-		<p>
-			Checking the state in the Vue console, components are not sharing the state and Pinia is initialized two times.
-		</p>
+		<p style="font-size: x-large">This should change => : <strong>{{ counter }}</strong></p>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { useCounter } from "./Storage"
-const counter = useCounter()
+import { counterStore } from "./Storage"
+import {useStore} from "@nanostores/vue";
+
+const counter = useStore(counterStore)
+
 </script>

@@ -12,9 +12,13 @@
 	"dependencies": {
 		"@astrojs/vue": "^2.0.1",
 		"@babel/core": "^7.20.12",
+		"@nanostores/vue": "^0.7.0",
 		"astro": "^2.0.14",
-		"pinia": "^2.0.30",
+		"nanostores": "^0.7.4",
 		"vite": "^4.1.2",
 		"vue": "^3.2.47"
+	},
+	"devDependencies": {
+		"@vue/devtools-api": "^6.5.0"
 	}
 }

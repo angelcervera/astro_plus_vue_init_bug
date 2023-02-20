@@ -1,16 +1,7 @@
-import { defineStore } from "pinia";
-import { ref } from 'vue';
+import {atom} from 'nanostores'
 
+export const counterStore = atom<number>(0)
 
+export const add = () => counterStore.set(counterStore.get() + 1);
 
-export const useCounter = defineStore("SharedStorage", () => {
-    const count = ref(0);
-    const add = () => (count.value = count.value + 1);
-    const subtract = () => (count.value = count.value - 1);
-
-    return {
-        count,
-        add,
-        subtract,
-    };
-});
+export const subtract = () => counterStore.set(counterStore.get() - 1);

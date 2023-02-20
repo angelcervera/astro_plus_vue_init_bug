@@ -1,13 +1,16 @@
 <template>
 	<div>
-		<button @click="counter.subtract()">-</button>		<button @click="counter.add()">+</button>
-		<pre>In control component: {{ counter.count }}</pre>
+		<button @click="subtract()">-</button>		<button @click="add()">+</button>
+		<pre>In control component: {{ counter }}</pre>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { useCounter } from "./Storage"
-const counter = useCounter()
+import { counterStore, add, subtract } from "./Storage"
+import {useStore} from "@nanostores/vue";
+
+const counter = useStore(counterStore)
+
 </script>
 
 
